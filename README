@@ -1,0 +1,89 @@
+This project folder contains all the code and data used
+in the study. As a first pass to understanding the tools and
+scripts here, I'd recommend just running the scripts in this
+and subdirectories after you have all the python dependencies 
+met. Dependencies are:
+ 
+    - Stimuli_Tool:
+            This is a simple module I made that makes
+            it much easier to load and organize stimuli. 
+            To "install" it, copy to Stimuli_Tool directory
+            into the site-packages directory of the
+            python environment you are using. To find
+            this location, open your python interpreter
+            and type:
+                >>> import sys
+                >>> sys.path
+            you should see a site-packages directory
+            somewhere in the list of paths. copy
+            Stimuli_Tool into that. Alternatively,
+            you can create a symbolic link in that
+            directory to its current location. Or
+            update your python path in ~/.profile
+            (or whatever the equivalent is in mac or windows).
+
+
+
+    - psychopy.
+    - t2p --> module for triangulating an n-degree polygon. Can be
+              found here:
+                http://code.google.com/p/poly2tri/
+    - openCV --> module for advanced image processing (not necessary for
+                 many of the scripts)
+
+
+Chances are something will not work correctly even after the dependences are in
+place. I'm always available if you have questions, and in general a little poking
+around may be necessary.
+
+
+Scripts:
+    - Interactive_Viwer.py (in current directory):
+            **NOTE: probably will not work well on mac***
+            This is a tool for interactively viewing the
+            images, saliency maps, and associated clips.
+            You can also do things like save images and
+            navigate frame-by-frame through the stimuli.
+            See the comments for some more details.
+
+            be updating it and improving readability as well.
+
+    - saliencyAlgorithm.py (in current directory):
+            This is a simple script for computing the non-gbvs
+            saliency maps. Note that this requires an extra
+            dependency.
+
+    - experiment.py (in Experiment):
+            An implementation of the experiment. 5 seconds
+            per trial, etc.
+
+    - order_generator.py (in Experiment):
+            A script to generate a random ordering of trials with
+            all of the constrainst we talk about. (note: it is
+            unstable with currenct constraints)
+
+    - verticesTool.py (in Analysis):
+            A script to define n-degree polygons (interest areas)
+            and do things like calculate their area and centroid.
+
+    - analysis_main.py (in Analysis):
+            The main analysis script. It is written in a way that
+            is probably not familiar to most researchers. And I'll
+            be updating it and improving readability as well. It has
+            a bunch of classes for storing trial and saliency information.
+            It also has a couple plots and prints various means and standard
+            deviations.
+
+    - heatAnalysis.py (in Analysis):
+            This is a script for calculating the total heat inside each of
+            the polygons given as input.
+
+    - analyze_subject_data.py (in Analysis/Subject_Data):
+            Script for pulling fixation data out of the raw .csv
+            files from the eye-tracker. It isn't partcularly well
+            writen and might be a bit obtuse, but it does work.
+            Some modifications will be necessary if different 
+            experiment data are used.
+
+
+

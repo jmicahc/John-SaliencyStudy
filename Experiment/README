@@ -1,0 +1,24 @@
+Scripts in this directory are relatively straightforward.
+There are only two:
+
+    1. order_generator.py:
+         - Creates a file called ordered_trials.txt
+           according to all the constraints we
+           discussed. The ramdomization code is
+           actually in Stimuli_Tool module which was
+           supposed to be copied into your site-packages
+           directory. Modifications to the constraints
+           will have to be made to Stimuli_Tool.py, and
+           only after a thorough understanding of the
+           code. Otherwise, for changes on constraints you
+           can ask me. Note that as this script stands,
+           it will fail ~85% of the time, since innitial
+           randomization often makes meeting constraints
+           impossible.
+
+  2. experiment.py:
+        - This is just a python implementation of the
+          same experiment created in Tobbi Studio. 
+          It is very simple.
+
+
